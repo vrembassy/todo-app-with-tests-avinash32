@@ -6,13 +6,12 @@
 	var appInstance = new AppView();
 	var newInputItem;
 	var toDoElements = storeInstance.getToDoElements();
-	function AppView(stat) {
-		this.stat = true;
+	function AppView() {
+		
     }
 	AppView.prototype.add = function(item) {
 			var statusOfAddition = itemsInstance.display(item);
 			(statusOfAddition) ? storeInstance.storeElements(item) : alert("Couldn't add new item"); 
-			return statusOfAddition;
 	}
 			
 	AppView.prototype.check = function(){
@@ -39,10 +38,9 @@
 			newInputItem = document.getElementById("newToDoItem");
 			newInputItem.addEventListener("keydown",appInstance.check);
 			var ulElement = document.getElementById("itemContainerId");
-			ulElement.onclick = itemsInstance.assignListeners;
-			//ulElement.addEventListener("click",itemsInstance.assignListeners);
+			ulElement.addEventListener("click",itemsInstance.assignListeners);
 		})();
-		console.log("Keydown event listened"); 
+		console.log("Keydown event listened");
 	}
 		
 		// store is only accessible by AppView. itemView and itemsView cannot access store.

@@ -1,14 +1,17 @@
 (function(){
 
-	function itemView(){}
+	function itemView(){
+		return this;
+	}
 	itemView.prototype.init = function(){
+		//nothing to initialize here
 		return true;
 	}
 	itemView.prototype.checkBoxEffect = function(id){
 		var appInstance = new Todo.AppView();
 		var checkBox = document.getElementById(id);
 		var name = checkBox.nextSibling;
-		if (checkBox.checked){
+		if (checkBox.checked == true){
 		name.classList.add("strikeItOut");
 		appInstance.changeState("checked",id);
 		}else {
@@ -31,7 +34,7 @@
 			if(decision == true){
 				var outerDivId = "#"+divId;
 				var outerDiv = document.querySelector(outerDivId);
-				outerDiv.remove();
+				outerDiv.innerHTML = null;
 				console.log("todo item deleted successfully");
 				alert("item deleted successfully");
 				appInstance.deleteFromStorage(checkId);
