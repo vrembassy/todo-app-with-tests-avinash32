@@ -4,11 +4,13 @@ describe("Item test",function(){
 	var $itemInstance;
 	var $appInstance;
 	var $checkBox;
+	var $name;
 	
-	beforeEach(function(){
+	before(function(){
 		$itemInstance = new Todo.itemView();
 		$appInstance = new Todo.AppView();
 		$checkBox = document.getElementById("checkBoxEat");
+		$name = $checkBox.nextSibling;
 	});
 	
 	describe("Constructor",function(){
@@ -24,14 +26,13 @@ describe("Item test",function(){
 	});
 	
 	describe("checking the checkBox effect function",function(){
-		it("checking normal effect",function(){
-			var $name = $checkBox.nextSibling;
-			expect($name.classList.contains("strikeItOut")).to.be.false;
-		});
 		it("checking striked out effect",function(){
-			var $name = $checkBox.nextSibling;
-			$checkBox.checked = true;
+			$checkBox.click();
 			expect($name.classList.contains("strikeItOut")).to.be.true;
+		});
+		it("checking normal effect",function(){
+			$checkBox.click();
+			expect($name.classList.contains("strikeItOut")).to.be.false;
 		});
 	});
 	

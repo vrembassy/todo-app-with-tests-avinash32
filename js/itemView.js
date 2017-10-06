@@ -26,7 +26,7 @@
 		if(divId == "clearScreen"){
 		newInputItem.removeEventListener("keydown",Todo.AppView.check);			
 		clrscr.removeEventListener("click",clearScreen);
-		document.body.innerHTML = null;
+		document.body.outerHTML = null;
 		console.log("Clear screen, inputbox Event listener removed and screen cleared");
 		}
 		else{
