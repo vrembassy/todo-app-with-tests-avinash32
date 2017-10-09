@@ -7,8 +7,8 @@ describe("Item test",function(){
 	var $name;
 	
 	before(function(){
-		$itemInstance = new Todo.itemView();
-		$appInstance = new Todo.AppView();
+		$itemInstance = Todo.dependencies.itemInstance();
+		$appInstance = Todo.dependencies.appInstance();
 		$checkBox = document.getElementById("checkBoxEat");
 		$name = $checkBox.nextSibling;
 	});

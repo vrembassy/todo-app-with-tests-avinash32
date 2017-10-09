@@ -11,9 +11,9 @@ describe("Testing itemsView",function(){
 	var $deleteButton;
 	
 	before(function(){
-		$itemsInstance = new Todo.itemsView();
-		$itemInstance = new Todo.itemView();
-		$appInstance = new Todo.AppView();
+		$itemsInstance = Todo.dependencies.itemsInstance();
+		$itemInstance = Todo.dependencies.itemInstance();
+		$appInstance = Todo.dependencies.appInstance();
 		$ulElement = document.getElementById("itemContainerId");
 		div = document.createElement("div");
 		$checkBox = document.getElementById("checkBoxEat");
