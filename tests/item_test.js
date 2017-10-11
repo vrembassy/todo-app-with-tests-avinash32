@@ -1,6 +1,6 @@
 var expect = chai.expect;
 
-describe("Item test",function(){
+describe("Testing ItemView",function(){
 	var $itemInstance;
 	var $appInstance;
 	var $checkBox;

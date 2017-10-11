@@ -43,7 +43,7 @@ describe("Testing itemsView",function(){
 		it("inserting a random item and deleting it there to check the remove function",function(){
 			$appInstance.add("harsha");
 			$itemsInstance.remove("harshadiv","checkBoxharsha");
-			expect(document.getElementById("harshadiv").innerHTML).to.be.eql('');
+			expect(document.getElementById("harshadiv")).to.not.exist;
 		});
 	});
 	
@@ -60,7 +60,7 @@ describe("Testing itemsView",function(){
 			$deleteButton.click();
 			//to make sure the button clicked is actually a delete button
 			expect($deleteButton.classList.contains("moveRightSide")).to.be.true;
-			expect($outerDiv.innerHTML).to.be.eql('');
+			expect(document.getElementById("kirandiv")).to.not.exist;
 		});
 	});
 });

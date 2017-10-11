@@ -12,9 +12,19 @@ Todo.dependencies = (function(){
 		return new Todo.itemsView();
 	}
 	
+	storeInstance = function(){
+		return new Todo.store();
+	}
+	
+	textBox = function(){
+		return document.getElementById("newToDoItem");
+	}
+	
 	return{
 		appInstance : appInstance,
 		itemInstance : itemInstance,
-		itemsInstance : itemsInstance
+		itemsInstance : itemsInstance,
+		storeInstance : storeInstance,
+		textBox : textBox
 	}
 })();

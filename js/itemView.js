@@ -30,18 +30,19 @@
 		console.log("Clear screen, inputbox Event listener removed and screen cleared");
 		}
 		else{
-			var decision = confirm("Do you want to delete?");
-			if(decision == true){
+				/* var decision = confirm("Do you want to delete?");
+				if(decision == true){ */
 				var outerDivId = "#"+divId;
 				var outerDiv = document.querySelector(outerDivId);
-				outerDiv.innerHTML = null;
+				//outerDiv.innerHTML = null;
+				outerDiv.outerHTML = null;
 				console.log("todo item deleted successfully");
-				alert("item deleted successfully");
+				//alert("item deleted successfully");
 				appInstance.deleteFromStorage(checkId);
-			}
-			else {
+			//	}
+			/* else {
 				alert("You chose not to delete that item");
-			}
+			}  */
 		}
 	}
 	itemView.prototype.display = function(newItem,checkBoxid,divId){
