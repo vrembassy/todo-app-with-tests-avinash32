@@ -7,14 +7,10 @@
 	<script type = "text/javascript" src = "js/itemView.js"></script>
 	<script type = "text/javascript" src = "js/itemsView.js"></script>
 	<script type = "text/javascript" src = "js/appView.js"></script>
-	<script type = "text/javascript" src = "js/dependencies.js"></script>
-	<link rel="stylesheet" media="all" href="vendor/mocha.css">
+	
+	
 </head>
 <body>
-	  <!-- test setup -->
-  <div id="mocha"><p><a href=".">Index</a></p></div>
-  <div id="messages"></div>
-  <div id="fixtures"></div>
 	<p class = "mobileDialog"> This is the mobile version of the webapp</p>
 	<div class = "outsideContainer">
 		<div class = "insideContainer">
@@ -22,26 +18,12 @@
 				<h2>TODO List</h2>
 			</div>
 			<input type = "text" class = "inputContainer" id = "newToDoItem"  
-					placeholder = "New TODO Item" autofocus/>
+					placeholder = "New TODO Item"/>
 			<ul id ="itemContainerId" class = "itemContainer">
 			</ul>
 			<input type = "button" id = "clearScreen" class = "clearScreenButton" 
 					value = "Clear Screen"/>
 		</div>
 	</div>
-	<script src="vendor/mocha.js"></script>
-	<script src="vendor/chai.js"></script>
-  
-	<script src="src/helpers.js"></script>
-	
-	<script>mocha.setup('bdd')</script>
-  
-	<script src="tests/item_test.js"></script>
-	<script src="tests/items_test.js"></script>
-	<script src="tests/appView_test.js"></script>
-	<script src="tests/store_test.js"></script>
-
-  <!-- executing the tests -->
-  <script>mocha.run();</script>
 </body>
 </html>

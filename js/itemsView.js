@@ -8,8 +8,7 @@
 		
 		
 	itemsView.prototype.remove = function(divId,checkId) {
-		var iteminst = new Todo.itemView();
-		iteminst.remove(divId,checkId);
+			Todo.itemView.remove(divId,checkId);
 	}
 	
 	itemsView.prototype.display = function(item) {

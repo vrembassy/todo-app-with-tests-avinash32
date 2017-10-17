@@ -7,12 +7,11 @@
 	var newInputItem;
 	var toDoElements = storeInstance.getToDoElements();
 	function AppView() {
-		return this;
+		
     }
 	AppView.prototype.add = function(item) {
 			var statusOfAddition = itemsInstance.display(item);
 			(statusOfAddition) ? storeInstance.storeElements(item) : alert("Couldn't add new item"); 
-			return statusOfAddition;
 	}
 			
 	AppView.prototype.check = function(){
@@ -41,6 +40,7 @@
 			var ulElement = document.getElementById("itemContainerId");
 			ulElement.addEventListener("click",itemsInstance.assignListeners);
 		})();
+		console.log("Keydown event listened");
 	}
 		
 		// store is only accessible by AppView. itemView and itemsView cannot access store.
@@ -64,15 +64,15 @@
 			console.log("item state changed");
 		}
 		
-	AppView.prototype.clearScreen = function(){
+		function clearScreen(){
 			var id = "clearScreen";
-			itemsInstance.remove(id);
+			Todo.itemsView.remove(id);
 		}
 		
 		// As soon as the DOM loads, I'm calling init function
 		document.addEventListener("DOMContentLoaded", function(event) {
 		console.log("DOM loaded");
-		appInstance.init();
+		Todo.AppView.prototype.init();
 		});
 	window.Todo = window.Todo || {};
 	window.Todo.AppView = AppView;
