@@ -20,8 +20,8 @@ window.Todo.AppView =
 		var ulElement = document.querySelector("#itemContainer");
 		ulElement.addEventListener("click",this.items.assignListeners);
 		ulElement.addEventListener("checked",function(e){alert(e.target.id)});
-		document.body.addEventListener("checked",this.doSomeShit,false);
-		document.body.addEventListener("unchecked",this.doSomeShit,false);
+		document.body.addEventListener("checked",this.listenForcheckbox,false);
+		document.body.addEventListener("unchecked",this.listenForcheckbox,false);
 		document.body.addEventListener("removed",this.remove_local,false);
 				
 		return this;
@@ -59,7 +59,7 @@ window.Todo.AppView =
 		}		
 	}
 	
-	AppView.prototype.doSomeShit = function(e){
+	AppView.prototype.listenForcheckbox = function(e){
 		var id = e.detail.id.substring(5);
 		var store = new Todo.Store();
 		store.setStatus(id,e.detail.state);
