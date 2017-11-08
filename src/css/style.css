@@ -60,7 +60,7 @@
 	opacity:0;
 	float:right;
 	width:2vw;
-	background-color: #e67300;
+	background-color: ##218A9E;;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -73,7 +73,7 @@
 	opacity:0;
 	float:right;
 	width:2vw;
-    background-color: #e67300;
+    background-color: ##218A9E;;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -109,24 +109,26 @@ li.horline{
 	opacity:1;
 	float:right;
 	width:2vw;
-	background-color: #e67300;
+	background-color: ##218A9E;;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block
+    display: inline-block;
+    border-radius : 30px;
 }
 
 .horline:hover .checkButton{
 	opacity:1;
 	float:right;
 	width:2vw;
-    background-color: #e67300;
+    background-color: ##218A9E;;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block
+    display: inline-block;
+    border-radius : 30px;
 }	
 /********************************* All effects are over ***********************/
 
