@@ -1,0 +1,36 @@
+<!--  -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Todo App tests</title>
+  <link rel = "stylesheet" media = "all" href = "../vendor/mocha.css">
+  <link rel = "stylesheet" media = "all" href = "../src/css/style.css">
+</head>
+<body>
+  <!-- test setup -->
+  <div id = "mocha"><p><a href = ".">Index</a></p></div>
+  <div id = "messages"></div>
+  <div id = "fixtures" class = "fixture"></div>
+  
+  <script src = "../vendor/mocha.js"></script>
+  <script src = "../vendor/chai.js"></script>
+  
+  <script src = "../src/js/ItemView.js"></script>
+  <script src = "../src/js/ItemsView.js"></script>
+  <script src= "../src/js/store.js"></script>
+  <script src = "../src/js/AppView.js"></script>
+  
+  
+  <script>mocha.setup('bdd')</script>
+<script src = "helpers.js"></script>
+  <script src = "ItemView_test.js"></script>
+  
+  <script src = "ItemsView_test.js"></script>
+  <script src = "Store_test.js"></script>
+  <script src = "AppView_test.js"></script>
+  <!-- executing the tests --> 
+ 
+  <script>mocha.run();</script>
+</body>
+</html>

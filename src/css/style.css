@@ -1,0 +1,197 @@
+/***************************Container Style*******************************/
+
+/******************** Outer Container*********************/
+.container{
+	width : 50vw;
+	height : 30vw;
+	position : absolute;
+
+	top : 20vh;
+	right : 0;
+	bottom :50vh;
+	left :25vw;
+	background-color : #eee;
+	overflow : scroll;
+	font-family : verdana;
+	border : 2px solid #000;
+	display : flex;
+}
+
+/*****************Inside container style***************/
+.insideContainer{
+	width : 90%;
+	height : auto;
+	margin-left : 5%;
+	margin-right : 5%;
+	position : absolute;
+}
+
+/* input box for entering new TODO item name*/
+.inputContainer {
+	width : 100%;
+	height : 2vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+}
+
+.fixture
+{
+	display:none;
+}
+
+/********* Container for header *****************/
+/* container to hold header */
+.headerContainer {
+	width : 100%;
+	height : auto;
+	border-bottom : 2px solid black;
+	margin-bottom : 0;
+}
+/************** End of Containers************/
+
+/********** Style for individual elements*******/
+/**clear screen button move right*****/
+.button {
+ 	float:right;
+}
+
+/********deletebutton style***************/
+.deletestyle{
+	opacity:0;
+	float:right;
+	width:2vw;
+	background-color: #2F6FC7;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block
+}
+
+/************checkButton style***************/
+.checkButton{
+	opacity:0;
+	float:right;
+	width:2vw;
+    background-color: #2F6FC7;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block
+}
+
+/********* Style for ul element********/
+.itemContainer{
+	list-style-type:none;
+	padding:0;
+	font-size:20px;
+	margin-top:30px;
+}
+
+/*adding strikethrough style*/
+.addlabel{
+	text-decoration:line-through;
+	color: #a3a375;
+}
+
+/*horizontal line*/
+li.horline{
+	
+	border-bottom:2px solid black;
+	padding-bottom:30px;
+	margin-bottom:25px;
+
+}
+
+/**************Adding hover effect to li element*********************/
+.horline:hover .deletestyle{
+	opacity:1;
+	float:right;
+	width:2vw;
+	background-color: #2F6FC7;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	border-radius : 20px;
+}
+
+.horline:hover .checkButton{
+	opacity:1;
+	float:right;
+	width:2vw;
+    background-color: #2F6FC7;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	border-radius : 20px;
+}	
+/********************************* All effects are over ***********************/
+
+/***************************************media query*******************************/
+@media screen and (max-width:1000px){
+	.container{
+	width:50vw;
+	height:50vw;
+	}
+	
+	.inputContainer{
+	width : 100%;
+	height : 3vw;
+	border : 2px solid black;
+	}
+}
+@media screen and (max-width:750px){
+	.container{
+	width:75vw;
+	height:60vh;
+	}
+	.inputContainer {
+	width : 100%;
+	height : 5vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+	}
+	
+	.container .insideContainer li a{
+		font-size : 3vw;
+	}
+}
+@media screen and (max-width:500px){
+	.container{
+	width:70vw;
+	height:80vh;
+	}
+	.inputContainer {
+	width : 100%;
+	height : 10vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+	}
+	
+	.container .insideContainer li a{
+		font-size : 4vw;
+	}
+}
+@media screen and (max-width:300px){
+	.container{
+	width:75vw;
+	height:90vh;
+	}
+	.inputContainer {
+	width : 100%;
+	height : 11vw;
+	border : 2px solid black;
+	margin-top : 1vw;
+	}
+	
+	.container .insideContainer li a{
+		font-size : 5vw;
+	}
+}
+
+/****************End of all the break points*******************************/
